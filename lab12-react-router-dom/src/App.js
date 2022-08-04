@@ -7,6 +7,7 @@ import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import Home from './pages/Home';
 import SubmittedForm from './pages/SubmittedForm';
+import PostPage from './pages/PostPage';
 
 function App() {
   return(<React.Fragment>
@@ -22,12 +23,16 @@ function App() {
         <li>
           <Link to="/contact">Contact </Link>
         </li>
+        <li>
+          <Link to="/posts">Posts</Link>
+        </li>
       </ul>
 <Routes>
   <Route path="/" element={<Home/>}/>
   <Route path="/about" element={<AboutUs/>}/>
   <Route path="/contact" element={<ContactUs/>}/>  
   <Route path="/form-submitted" element={<SubmittedForm/>}/>  
+  <Route path="/posts" element={<PostPage/>}/>  
 </Routes>
       </nav>
 
