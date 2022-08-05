@@ -8,7 +8,7 @@ export default function StudentList() {
             <ul>
                 {
                   Context.getStudents().map(p => {
-                    return <li>Student_No:({p.student_number})Year:({p.year}) Gender:({p.gender}) Graduated:({p.graduated}) 	<button
+                    return <li>Student_No:({p.student_number})Year:({p.year}) Gender:({p.gender}) Graduated:({p.graduated === 'true' ? "Yes":"No"}) 	<button
 										onClick={() =>
 											Context.deleteAStudent(
 												p.student_number

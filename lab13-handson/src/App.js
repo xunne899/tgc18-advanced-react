@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import StudentList from './StudentList';
 import StudentContext from './StudentContext';
@@ -23,7 +23,7 @@ function App() {
       student_number:Math.floor(Math.random() * 10000),
       year:2020,
       gender:'male',
-      graduated: 'false'
+      graduated: 'true'
     },
     {
       student_number: Math.floor(Math.random() * 10000),
@@ -41,13 +41,13 @@ function App() {
     deleteAStudent: (student_number) => {
       setStudents(students.filter((s) => s.student_number !== student_number));
     },
-    AddToList: (student_number, year,gender, graduated) => {
+    AddToList: ( year,gender, graduated) => {
       const cloned = [...students, {
         // id:  Math.floor((Math.random() * 100000) + 10000),
         student_number:  Math.floor((Math.random() * 100000) + 10000),
         year,
         gender,
-        graduated
+        graduated 
       }]
       setStudents(cloned);
     }

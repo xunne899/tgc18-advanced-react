@@ -74,7 +74,7 @@ export default function AddStudent() {
 						Context.AddToList(
 							formField.year,
 							formField.gender,
-							formField.graduated
+							formField.graduated 
 						);
 					}}
 				>
